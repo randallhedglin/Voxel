@@ -1,0 +1,27 @@
+#include<afxres.h>
+#include"voxel.h"
+
+MainMenu MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New",MENU_FILE_NEW
+        MENUITEM "&Open...",MENU_FILE_OPEN
+        MENUITEM "&Save",MENU_FILE_SAVE
+        MENUITEM "Save &as...",MENU_FILE_SAVEAS
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",MENU_FILE_EXIT
+    END
+    POPUP "&Draw"
+    BEGIN
+        POPUP "Select &Color"
+        BEGIN
+            MENUITEM "&Foreground...",MENU_DRAW_CHOOSE_COLOR_1
+            MENUITEM "&Background...",MENU_DRAW_CHOOSE_COLOR_2
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Draw",MENU_DRAW_DRAW
+    END
+END
+
+// END //
